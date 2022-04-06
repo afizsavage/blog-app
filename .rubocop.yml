@@ -8,7 +8,7 @@ AllCops:
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 198
 Metrics/MethodLength:
   Max: 20
 Metrics/AbcSize:
@@ -54,4 +54,6 @@ Style/OptionalBooleanParameter:
 Metrics/CyclomaticComplexity:
   Enabled: false
 Lint/MissingSuper:
+  Enabled: false
+Metrics/PerceivedComplexity:
   Enabled: false
