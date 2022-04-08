@@ -66,11 +66,10 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'rspec-rails', '~> 6.0.0.rc1'
+  gem 'rails-controller-testing'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
 
-group :development, :test do
-  gem 'rspec-rails', '~> 6.0.0.rc1'
-end
