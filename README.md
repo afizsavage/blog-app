@@ -22,6 +22,10 @@ Blog App is a fully functional website that will show the list of posts and empo
 - Type `cd blog-app` to move to the project directory
 - Type `bundle install` to install project dependencies
 
+**To Run Migration files**
+
+- - Type `rails db:migrate` to run migration files
+
 **To run the project**
 
 - Type `rails s` to run the project
