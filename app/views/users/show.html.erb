@@ -1,16 +1,17 @@
 
-
-<%= render partial: "partials/userCard", locals: { user: @user } %>
-
 <div>
-    <%= @user.bio %>
+    <%= render partial: "partials/userCard", locals: { user: @user } %>
+
+    <div>
+        <%= @user.bio %>
+    </div>
+
+    <% @user.most_recent_posts.each_with_index do |post,index| %>
+        <%= render partial: "partials/postCard", locals:{ post: post, index:index } %>
+    <% end %>
+
+    <div>
+        <%= link_to "See all posts", user_posts_path(@user) %>
+    </div>
 </div>
 
-<% @user.most_recent_posts.each_with_index do |post,index| %>
-    <%= render partial: "partials/postCard", locals:{ post: post, index:index } %>
-<% end %>
-
-
-<div>
-    <%= link_to "See all posts", user_posts_path(@user) %>
-</div>

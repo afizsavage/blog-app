@@ -1,0 +1,17 @@
+<div>
+    <ul>
+        <% comments.each_with_index do |comment,index| %>
+            <li>
+                <span>
+                    <%= "#{comment.author.name}:" %>
+                </span>
+                <span>
+                    <%= comment.text %>
+                </span>
+                <span>
+                    <%= index + 1 %>
+                </span>
+            </li>
+        <% end %>
+    </ul>
+</div>
