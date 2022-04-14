@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   end
 
   # root "articles#index"
-  root 'posts#index'
+  root to: 'users#index'
 end
