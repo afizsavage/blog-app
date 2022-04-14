@@ -1,0 +1,16 @@
+<div>
+    <h2>
+        <%= "Post ##{index + 1}" %>
+    </h2>
+    <p>
+        <%= post.text %>
+    </p>
+    <div>
+        <small>
+            <%= "comments: #{post.comments_counter}" %>
+        </small>
+        <small>
+            <%= "Likes: #{post.likes_counter}" %>
+        </small>
+    </div>
+</div>
