@@ -1,0 +1,23 @@
+
+<div>
+    <div>
+        <div>
+            <h1>
+                <%= "Post ##{} by #{@author.name}" %>
+            </h1>
+            <div>
+                <small>
+                    <%= "comments: #{@post.comments_counter}" %>
+                </small>
+                <small>
+                    <%= "Likes: #{@post.likes_counter}" %>
+                </small>
+            </div>
+        </div>
+        <p>
+            <%= @post.text %>
+        </p>
+    </div>
+    <%= render partial: "partials/commentsCard", locals:{ comments: @comments } %>
+</div>
+
