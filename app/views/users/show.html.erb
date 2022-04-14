@@ -10,9 +10,13 @@
     </div>
 
     <div class="mt-7">
-        <% @user.most_recent_posts.each_with_index do |post,index| %>
-            <%= render partial: "partials/postCard", locals:{ post: post, index:index } %>
-        <% end %>
+        <ul>
+            <% @user.most_recent_posts.each_with_index do |post,index| %>
+                <li class="my-5">
+                    <%= render partial: "partials/postCard", locals:{ post: post, index:index } %>
+                </li>
+            <% end %>
+        </ul>
     </div>
 
     <div class="flex justify-center">

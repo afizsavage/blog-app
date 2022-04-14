@@ -1,14 +1,21 @@
-<div>
-    <div>
+<div class="w-full">
+    <div class="mb-5">
         <%= render partial: "partials/userCard", locals: { user: @user } %>
     </div>
     <div>
-        <% @user_posts.each_with_index do |post,index| %>
-            <%= render partial: "partials/postCard", locals:{ post: post, index:index } %>
-            <%= render partial: "partials/commentsCard", locals:{ comments: post.comments } %>
-        <% end %>
+
+        <ul>
+            <% @user_posts.each_with_index do |post,index| %>
+                <li class="my-5">
+                    <%= render partial: "partials/postCard", locals:{ post: post, index:index } %>
+                    <%= render partial: "partials/commentsCard", locals:{ comments: post.comments } %>
+                </li>
+            <% end %>
+        </ul>
     </div>
-    <div>
-        <button>Pagination</button>
+    <div class="flex justify-center">
+        <button class=" border-2 px-4 ">
+            Pagination
+        </button>
     </div>
 </div>
