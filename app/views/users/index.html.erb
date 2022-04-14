@@ -1,0 +1,9 @@
+<div class="w-full">
+  <ul>
+    <% @users.each do |user|%>
+    <li class="my-7">
+      <%= render partial: "partials/userCard", locals: { user: user } %>
+    </li>
+    <% end %>
+  </ul>
+</div>
